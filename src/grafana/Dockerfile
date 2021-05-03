@@ -1,5 +1,5 @@
 FROM alpine:3.11
 COPY ./setup/* /root/
 RUN sh /root/setup.sh
-EXPOSE 80
+EXPOSE 3000
 CMD sh /root/start.sh
