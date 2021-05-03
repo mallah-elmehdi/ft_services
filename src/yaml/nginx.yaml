@@ -20,6 +20,7 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 80
+        - containerPort: 443
         
 ---
 
@@ -34,6 +35,11 @@ spec:
     app: nginx
   type: LoadBalancer
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 80
+  - name: https 
+    protocol: TCP
+    port: 443
+    targetPort: 443
