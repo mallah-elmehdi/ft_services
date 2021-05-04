@@ -9,7 +9,7 @@
 kubectl delete deployment grafana mysql nginx phpmyadmin wordpress 
 kubectl delete service grafana-service mysql-service nginx-service phpmyadmin-service wordpress-service
 
-docker rmi -f $(docker images -a -q)
+# docker rmi -f $(docker images -a -q)
 
 docker build -t nginx "src/nginx"
 docker build -t phpmyadmin "src/phpmyadmin"
